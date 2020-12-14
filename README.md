@@ -5,5 +5,5 @@ The goal was to make a useless website using HTML, CSS and JavaScript.
 Mission accomplished!
 
 ### Testers
-Richard Segerkvist
-Jonathan Larsson
+- Richard Segerkvist
+- Jonathan Larsson
