@@ -43,6 +43,8 @@ window.addEventListener("keyup", function (e) {
   if (e.key === "Enter") {
     audioMotherfucker.pause();
     bottomSection.style.display = "grid";
+    instructions.style.display = "none";
+    newInstructions.style.display = "block";
   }
 });
 
