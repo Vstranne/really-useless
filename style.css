@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Russo One";
+  src: url("./fonts/RussoOne-Regular.woff2") format("woff2"),
+    url("./fonts/RussoOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Russo One";
+}
+body {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  font-size: 20px;
+  scroll-snap-type: y mandatory;
+}
+p {
+  color: black;
+  background-color: white;
+  padding: 0.3rem;
+  font-size: 26px;
+}
+h1 {
+  background-color: white;
+  text-align: center;
+  margin: 20px;
+  padding: 5px;
+}
+main {
+  width: 100%;
+
+  scroll-snap-type: y;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+section {
+  padding: 10px;
+  scroll-snap-align: center;
+  background-image: url("images/bg.jpg");
+  background-size: contain;
+}
+main .firstSection {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.bottomSection {
+  height: 100vh;
+  display: none;
+  transition-duration: 0.9s;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 0;
+}
+.revealed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pauseBtn,
+.playAgainBtn {
+  display: none;
+}
+
+button {
+  height: 2.5rem;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.centerGif {
+  transform: translateX(100vw);
+  transition-duration: 0.4s;
+  max-width: 100%;
+}
+.instructions {
+  display: none;
+  margin-top: 1rem;
+}
+.newInstructions {
+  display: none;
+  margin-top: 1rem;
+}
+.gridItem {
+  padding: 0;
+  margin: 0;
+}
+.gridItem img {
+  height: 20vh;
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .bottomSection {
+    grid-template-columns: 1fr 1fr;
+  }
+}
